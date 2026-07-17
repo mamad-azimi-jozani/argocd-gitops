@@ -1,0 +1,21 @@
+name: K8s deployment
+on: 
+- push
+- workflow_dispatch
+
+
+jobs:
+  k8s-deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - id: checkout
+        uses: actions/checkout@v7.0.0
+      - id: just-test
+        name: Just test everything is ok
+        shell: bash
+        run: |
+          ls -ll 
+          
+      
+  
+  
